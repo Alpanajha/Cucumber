@@ -26,7 +26,6 @@ public class loginTest {
 		driver.get("http://10.232.237.143:443/TestMeApp/");
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-
 	}
 
 	@When("^user enters username and password$")
@@ -49,6 +48,7 @@ public class loginTest {
 		for (String s : product) {
 			driver.findElement(By.name("products")).sendKeys(s);
 			driver.findElement(By.xpath("//input[@value='FIND DETAILS']")).click();
+			//driver.findElement(By.xpath(xpathExpression))
 		}
 
 	}
